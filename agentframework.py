@@ -99,7 +99,8 @@ class Agent():
                 else:
                     self._x = (self._x - 1) % 100
                    
-                    
+#used the elif function which is a combination of else and if and 
+#takes into consideration the if factor above instead of starting a new one                    
             elif self.store > 100 :
                 print('boost')
                 #kept in for the same reason above
@@ -116,8 +117,7 @@ class Agent():
 #            print('store:'+str(self.store)) this was to test
                  
 #added extra code so that each move takes the agent store down by 5
-#also added if the store is below 5 then slower movement
-#also added if high store then move quicker
+#also added if high store then move quicker (boost mode)
                 
 ###########################  EAT ENVIRONMENT  ################################               
         def eat(self):
@@ -134,7 +134,8 @@ class Agent():
                 print('not hungry!')
                 #was a test but now kept in to see when agents are full
 
-#the above tells the agents if store is low eat more and vice versa          
+#the above tells the agents if store is low eat more
+#and if full to not eat and highlight in the model that they aren't hungry
             
 #########################  NEIGHBOURHOOD SHARE  ##############################           
          #this method tells the agents to share with their nearby neighbours 
